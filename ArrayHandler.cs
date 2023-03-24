@@ -8,7 +8,7 @@ public static class ArrayHandler
     /// <summary>
     /// Метод создания массива
     /// </summary>
-    /// <param name="size"></param>
+    /// <param name="size">Размер создаваемого массива</param>
     /// <returns>Пустой массив строк</returns>
     public static string[] CreateEmptyArray(int size)
     {
@@ -18,7 +18,8 @@ public static class ArrayHandler
     /// <summary>
     /// Метод заполнения массива пользователем
     /// </summary>
-    /// <value>Заполненный пользователем массив</value>
+    /// <param name="arr">Пустой массив строк для заполнения</param>
+    /// <returns>Заполненный пользователем массив строк</returns>
     public static string[] FillArray(this string [] arr)
     {
         for (int i=0; i<arr.Length; i++)
@@ -41,7 +42,7 @@ public static class ArrayHandler
     /// <summary>
     /// Метод вывода массива
     /// </summary>
-    /// <param name="arr"></param>
+    /// <param name="arr">Массив для вывода в консоль</param>
     public static void ShowArray(this string[] arr)
     {
         Console.Write("[");
@@ -55,8 +56,8 @@ public static class ArrayHandler
     /// <summary>
     /// Метод создает массив из arr с элементами, где длина строки меньше либо равна заданной maxStringSize.
     /// </summary>
-    /// <param name="arr"></param>
-    /// <param name="maxStringSize"></param>
+    /// <param name="arr">Изначальный массив</param>
+    /// <param name="maxStringSize">Максимальная длина строки для поиска</param>
     /// <returns>Новый массив</returns>
     public static string[] CreateArrayByParameters(this string[] arr, int maxStringSize)
     {
