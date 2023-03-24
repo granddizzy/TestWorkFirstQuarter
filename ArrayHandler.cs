@@ -52,6 +52,28 @@ public static class ArrayHandler
         Console.WriteLine("]");
     }
 
+    /// <summary>
+    /// Метод создает массив из arr с элементами, где длина строки меньше либо равна заданной maxStringSize.
+    /// </summary>
+    /// <param name="arr"></param>
+    /// <param name="maxStringSize"></param>
+    /// <returns>Новый массив</returns>
+    public static string[] CreateArrayByParameters(this string[] arr, int maxStringSize)
+    {
+        string[] newArr = new string[arr.Length];
+    
+        int realSize=0;
+        for (int i=0; i<arr.Length; i++)
+            if (arr[i].Length<=maxStringSize)
+            {
+                newArr[realSize]=arr[i];
+                realSize++;
+            } 
 
+        if (realSize<arr.Length)
+            Array.Resize(ref newArr, realSize);   
+
+        return newArr;
+    }
 
 }
