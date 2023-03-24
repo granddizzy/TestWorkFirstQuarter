@@ -38,6 +38,20 @@ public static class ArrayHandler
         return arr;
     }
 
+    /// <summary>
+    /// Метод вывода массива
+    /// </summary>
+    /// <param name="arr"></param>
+    public static void ShowArray(this string[] arr)
+    {
+        Console.Write("[");
 
-    
+        for (int i=0; i<arr.Length; i++)
+            Console.Write((i>0 ? ",\"" :"\"") + arr[i] + "\"");
+
+        Console.WriteLine("]");
+    }
+
+
+
 }
