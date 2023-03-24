@@ -20,3 +20,6 @@ while (maxStringSize<0)
     if (maxStringSize<0)
         Console.Write("Invalid maximum string size!!! ");
 }
+
+string[] arr = CreateEmptyArray(size).FillArray();
+arr.ShowArray();
