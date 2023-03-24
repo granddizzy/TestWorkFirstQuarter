@@ -23,3 +23,7 @@ while (maxStringSize<0)
 
 string[] arr = CreateEmptyArray(size).FillArray();
 arr.ShowArray();
+
+Console.WriteLine("Modify array:");
+string[] newArr = arr.CreateArrayByParameters(maxStringSize);
+newArr.ShowArray();
